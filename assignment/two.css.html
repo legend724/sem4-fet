@@ -1,45 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Technical Skills</title>
-<style>
-  body {
-    background: rgb(25,50,50); /* blue background */
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center; /* Centers h2 and other text */
-  }
+    <title>Technical Skills List</title>
 
-  h2 {
-    text-align: center;
-  }
+    <style>
+        body {
+            background-color: #e0f2fe;
+            font-family: Arial;
+            padding: 20px;
+        }
 
-  /* Center the list block while keeping text left-aligned inside it */
-  ol {
-    display: table; /* Acts like a block that fits its content */
-    margin: 0 auto; /* Centers the table */
-    text-align: left; /* Keeps the list items left-aligned */
-  }
-</style>
+        input, select, button {
+            margin: 5px;
+            padding: 5px;
+        }
+
+        ul {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
 
-<h2>Technical Skill Matrix</h2>
+<h1>Technical Skills</h1>
+
+<input id="skillInput" placeholder="Enter skill">
+<select id="categorySelect">
+    <option value="prog">Programming Languages</option>
+    <option value="tools">Tools & Technologies</option>
+    <option value="core">Core Computer Science</option>
+</select>
+
+<button onclick="addSkill()">Add</button>
+<button onclick="removeSkill()">Remove</button>
 
 <ol>
-  <li> <strong>Software Development</strong>
-    <ul>
-      <li>C</li>
-      <li>Java</li>
-      <li>Python</li>
-    </ul>
-  </li>
-  <li> <strong>Database Systems</strong>
-    <ul>
-      <li>SQL</li>
-    </ul>
-  </li>
+    <li>Programming Languages
+        <ul id="prog"><li>C</li><li>Python</li><li>Java</li></ul>
+    </li>
+    <li>Tools & Technologies
+        <ul id="tools"><li>VS Code</li><li>Git</li><li>Linux</li></ul>
+    </li>
+    <li>Core Computer Science
+        <ul id="core"><li>Programming</li><li>Data Structures</li><li>Algorithms</li></ul>
+    </li>
 </ol>
+
+<script>
+function getList() {
+    return document.getElementById(categorySelect.value);
+}
+
+function addSkill() {
+    let val = skillInput.value.trim();
+    if (!val) return alert("Enter skill");
+
+    let list = getList();
+    for (let li of list.children)
+        if (li.textContent.toLowerCase() === val.toLowerCase())
+            return alert("Already exists");
+
+    list.innerHTML += `<li>${val}</li>`;
+    skillInput.value = "";
+}
+
+function removeSkill() {
+    let val = skillInput.value.trim().toLowerCase();
+    let list = getList();
+
+    for (let li of list.children) {
+        if (li.textContent.toLowerCase() === val) {
+            li.remove();
+            skillInput.value = "";
+            return;
+        }
+    }
+    alert("Not found");
+}
+</script>
 
 </body>
 </html>
