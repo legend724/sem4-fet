@@ -1,67 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>RCB Official Jersey Store</title>
-
+  <meta charset="UTF-8">
+  <title>IPL Cricket Website</title>
   <style>
-    body{
-      font-family: Arial;
-      text-align:center;
-      background:#0a0a0a;
-      color:white;
-      margin:0;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #0d1b2a;
+      color: white;
+      text-align: center;
     }
 
-    header{
-      background:red;
-      padding:20px;
-      font-size:24px;
-      font-weight:bold;
+    header {
+      background: #e63946;
+      padding: 20px;
+      font-size: 28px;
+      font-weight: bold;
     }
 
-    .card{
-      margin-top:40px;
+    nav {
+      background: #1b263b;
+      padding: 10px;
     }
 
-    img{
-      width:250px;
-      border-radius:10px;
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    button{
-      padding:12px 25px;
-      background:#e10600;
-      color:white;
-      border:none;
-      font-size:18px;
-      border-radius:5px;
-      cursor:pointer;
+    nav a:hover {
+      color: yellow;
     }
 
-    button:hover{
-      background:darkred;
+    .container {
+      padding: 20px;
+    }
+
+    .card {
+      background: #415a77;
+      margin: 15px auto;
+      padding: 15px;
+      width: 60%;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #e63946;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
     }
   </style>
 </head>
 
 <body>
 
-  <header>RCB Official Jersey Store</header>
+<header>
+  IPL 2026 Cricket Hub
+</header>
 
-  <div class="card">
-    <img src="https://shop.royalchallengers.com/cdn/shop/files/RCB_JERSEY.jpg" alt="RCB Jersey">
+<nav>
+  <a href="#home">Home</a>
+  <a href="#teams">Teams</a>
+  <a href="#schedule">Schedule</a>
+  <a href="#about">About IPL</a>
+</nav>
 
-    <h2>Official RCB Jersey</h2>
-    <h3>Price: ₹1,499</h3>
+<div class="container" id="home">
+  <h2>Welcome to IPL World</h2>
+  <p>Get all updates, teams, and excitement of the Indian Premier League!</p>
+</div>
 
-    <button onclick="buyNow()">Buy Now</button>
-  </div>
+<div class="container" id="teams">
+  <h2>IPL Teams</h2>
 
-  <script>
-    function buyNow(){
-      window.location.href = "https://www.royalchallengers.com/";
-    }
-  </script>
+  <div class="card">Chennai Super Kings (CSK)</div>
+  <div class="card">Mumbai Indians (MI)</div>
+  <div class="card">Royal Challengers Bengaluru (RCB)</div>
+  <div class="card">Kolkata Knight Riders (KKR)</div>
+  <div class="card">Delhi Capitals (DC)</div>
+</div>
+
+<div class="container" id="schedule">
+  <h2>Match Schedule</h2>
+  <div class="card">CSK vs MI - 7:30 PM</div>
+  <div class="card">RCB vs KKR - 7:30 PM</div>
+  <div class="card">DC vs SRH - 3:30 PM</div>
+</div>
+
+<div class="container" id="about">
+  <h2>About IPL</h2>
+  <p>
+    The Indian Premier League (IPL) is a professional Twenty20 cricket league in India,
+    known for its exciting matches and star players from around the world.
+  </p>
+</div>
+
+<footer>
+  © 2026 IPL Fan Website | Made with ❤️
+</footer>
 
 </body>
 </html>
