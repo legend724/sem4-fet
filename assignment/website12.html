@@ -1,405 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RCB Official Jersey Store</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>RCB Jersey Shop</title>
 
   <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #111;
+      color: white;
     }
 
-    body{
-      background:#0d0d0d;
-      color:white;
+    .box {
+      margin-top: 50px;
     }
 
-    /* HEADER */
-
-    header{
-      width:100%;
-      padding:20px 8%;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      background:black;
-      position:sticky;
-      top:0;
-      z-index:1000;
-      box-shadow:0 2px 10px rgba(255,0,0,0.3);
+    img {
+      width: 250px;
+      border-radius: 10px;
     }
 
-    .logo{
-      font-size:32px;
-      font-weight:700;
-      color:#ff0000;
+    button {
+      background: red;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
     }
 
-    nav a{
-      text-decoration:none;
-      color:white;
-      margin-left:25px;
-      font-size:17px;
-      transition:0.3s;
+    button:hover {
+      background: darkred;
     }
-
-    nav a:hover{
-      color:#ff0000;
-    }
-
-    /* HERO */
-
-    .hero{
-      height:90vh;
-      background:
-      linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
-      url('https://images.unsplash.com/photo-1547347298-4074fc3086f0?q=80&w=1400&auto=format&fit=crop')
-      center/cover no-repeat;
-
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      padding:20px;
-    }
-
-    .hero-content h1{
-      font-size:70px;
-      color:#ff0000;
-      margin-bottom:20px;
-    }
-
-    .hero-content p{
-      font-size:22px;
-      margin-bottom:30px;
-      color:#ddd;
-    }
-
-    .hero-content button{
-      padding:15px 35px;
-      border:none;
-      background:#ff0000;
-      color:white;
-      font-size:18px;
-      border-radius:40px;
-      cursor:pointer;
-      transition:0.3s;
-    }
-
-    .hero-content button:hover{
-      background:white;
-      color:black;
-      transform:scale(1.05);
-    }
-
-    /* PRODUCTS */
-
-    .section-title{
-      text-align:center;
-      font-size:45px;
-      margin-top:60px;
-      color:#ff0000;
-    }
-
-    .products{
-      padding:60px 8%;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:35px;
-    }
-
-    .card{
-      background:#1a1a1a;
-      border-radius:20px;
-      overflow:hidden;
-      transition:0.4s;
-      box-shadow:0 10px 20px rgba(0,0,0,0.4);
-      position:relative;
-    }
-
-    .card:hover{
-      transform:translateY(-10px);
-      box-shadow:0 15px 30px rgba(255,0,0,0.3);
-    }
-
-    .card img{
-      width:100%;
-      height:350px;
-      object-fit:cover;
-    }
-
-    .badge{
-      position:absolute;
-      top:15px;
-      left:15px;
-      background:red;
-      padding:8px 14px;
-      border-radius:20px;
-      font-size:14px;
-      font-weight:600;
-    }
-
-    .card-content{
-      padding:25px;
-      text-align:center;
-    }
-
-    .card-content h2{
-      margin-bottom:10px;
-      font-size:28px;
-    }
-
-    .card-content p{
-      color:#ccc;
-      font-size:15px;
-      margin-bottom:15px;
-    }
-
-    .price{
-      font-size:28px;
-      color:gold;
-      margin-bottom:20px;
-      font-weight:700;
-    }
-
-    .buy-btn{
-      width:100%;
-      padding:14px;
-      border:none;
-      background:#ff0000;
-      color:white;
-      font-size:17px;
-      border-radius:10px;
-      cursor:pointer;
-      transition:0.3s;
-    }
-
-    .buy-btn:hover{
-      background:white;
-      color:black;
-    }
-
-    /* FEATURES */
-
-    .features{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:30px;
-      padding:40px 8%;
-      background:#111;
-    }
-
-    .feature-box{
-      width:250px;
-      text-align:center;
-      padding:25px;
-      border-radius:15px;
-      background:#1b1b1b;
-    }
-
-    .feature-box h3{
-      margin:15px 0;
-      color:#ff0000;
-    }
-
-    /* FOOTER */
-
-    footer{
-      background:black;
-      padding:25px;
-      text-align:center;
-      margin-top:50px;
-      color:#aaa;
-    }
-
-    /* MOBILE */
-
-    @media(max-width:768px){
-
-      .hero-content h1{
-        font-size:45px;
-      }
-
-      nav{
-        display:none;
-      }
-
-    }
-
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
+  <div class="box">
+    <h1>RCB Jersey</h1>
 
-  <header>
-    <div class="logo">RCB STORE</div>
+    <img src="https://via.placeholder.com/250x300.png?text=RCB+Jersey" alt="RCB Jersey">
 
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Jerseys</a>
-      <a href="#">Players</a>
-      <a href="#">Offers</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
+    <h2>Price: ₹999</h2>
 
-  <!-- HERO -->
-
-  <section class="hero">
-
-    <div class="hero-content">
-      <h1>Wear The Pride ❤️</h1>
-
-      <p>
-        Official Royal Challengers Bangalore Fan Jerseys 2026
-      </p>
-
-      <button onclick="shopNow()">
-        Shop Now
-      </button>
-    </div>
-
-  </section>
-
-  <!-- PRODUCTS -->
-
-  <h1 class="section-title">Trending Jerseys</h1>
-
-  <section class="products">
-
-    <!-- PRODUCT 1 -->
-
-    <div class="card">
-
-      <div class="badge">BEST SELLER</div>
-
-      <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=900&auto=format&fit=crop">
-
-      <div class="card-content">
-
-        <h2>RCB Home Jersey</h2>
-
-        <p>
-          Premium quality jersey with breathable fabric.
-        </p>
-
-        <div class="price">₹1,999</div>
-
-        <button class="buy-btn" onclick="buyItem('RCB Home Jersey')">
-          Buy Now
-        </button>
-
-      </div>
-
-    </div>
-
-    <!-- PRODUCT 2 -->
-
-    <div class="card">
-
-      <div class="badge">NEW</div>
-
-      <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=900&auto=format&fit=crop">
-
-      <div class="card-content">
-
-        <h2>Virat Edition</h2>
-
-        <p>
-          Special fan edition inspired by King Kohli.
-        </p>
-
-        <div class="price">₹2,499</div>
-
-        <button class="buy-btn" onclick="buyItem('Virat Edition')">
-          Buy Now
-        </button>
-
-      </div>
-
-    </div>
-
-    <!-- PRODUCT 3 -->
-
-    <div class="card">
-
-      <div class="badge">LIMITED</div>
-
-      <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?q=80&w=900&auto=format&fit=crop">
-
-      <div class="card-content">
-
-        <h2>RCB Black Edition</h2>
-
-        <p>
-          Stylish black edition jersey for true fans.
-        </p>
-
-        <div class="price">₹2,999</div>
-
-        <button class="buy-btn" onclick="buyItem('RCB Black Edition')">
-          Buy Now
-        </button>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- FEATURES -->
-
-  <section class="features">
-
-    <div class="feature-box">
-      <h3>🚚 Free Delivery</h3>
-      <p>Free shipping across India.</p>
-    </div>
-
-    <div class="feature-box">
-      <h3>💳 Secure Payment</h3>
-      <p>100% safe and secure checkout.</p>
-    </div>
-
-    <div class="feature-box">
-      <h3>⭐ Premium Quality</h3>
-      <p>Official fan-quality jerseys.</p>
-    </div>
-
-  </section>
-
-  <!-- FOOTER -->
-
-  <footer>
-    © 2026 RCB Official Fan Store | Made With ❤️ For RCB Fans
-  </footer>
-
-  <!-- JAVASCRIPT -->
+    <button onclick="buyNow()">Buy Now</button>
+  </div>
 
   <script>
-
-    function shopNow(){
-      window.scrollTo({
-        top:700,
-        behavior:'smooth'
-      });
+    function buyNow() {
+      alert("RCB Jersey Added to Cart!");
     }
-
-    function buyItem(item){
-      alert("You selected: " + item);
-    }
-
   </script>
 
 </body>
