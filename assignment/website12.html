@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Buy RCB Jersey Online</title>
+  <title>RCB Jersey Store</title>
   <style>
     body {
       margin: 0;
@@ -14,40 +14,55 @@
 
     header {
       padding: 25px;
-      font-size: 30px;
+      font-size: 32px;
       font-weight: bold;
       background: rgba(0,0,0,0.6);
     }
 
     .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       padding: 20px;
     }
 
     .card {
       background: rgba(255,255,255,0.12);
-      margin: 20px auto;
-      padding: 20px;
-      width: 80%;
+      margin: 15px;
+      padding: 15px;
+      width: 250px;
       border-radius: 12px;
+      box-shadow: 0 0 10px black;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
     }
 
     .btn {
       display: inline-block;
-      padding: 12px 18px;
       margin-top: 10px;
+      padding: 10px;
       background: gold;
       color: black;
       font-weight: bold;
-      text-decoration: none;
       border-radius: 8px;
+      cursor: pointer;
     }
 
     .btn:hover {
       background: orange;
     }
 
+    #cart {
+      margin-top: 20px;
+      padding: 15px;
+      background: rgba(0,0,0,0.5);
+    }
+
     footer {
-      margin-top: 30px;
+      margin-top: 20px;
       padding: 15px;
       background: rgba(0,0,0,0.7);
     }
@@ -57,40 +72,62 @@
 <body>
 
 <header>
-  🏏 Buy Official RCB Jersey (Online Store)
+  🏏 RCB Jersey Store (Official Fan Shop)
 </header>
 
 <div class="container">
 
   <div class="card">
-    <h2>RCB Jersey on Amazon</h2>
-    <p>Search official and fan RCB jerseys on Amazon India.</p>
-    <a class="btn" href="https://www.amazon.in/s?k=rcb+jersey" target="_blank">
-      Buy RCB Jersey
-    </a>
+    <img src="https://via.placeholder.com/250x200?text=RCB+Home+Jersey" alt="Jersey">
+    <h3>Home Jersey</h3>
+    <p>Price: ₹999</p>
+    <button class="btn" onclick="addToCart('Home Jersey')">Add to Cart</button>
   </div>
 
   <div class="card">
-    <h2>RCB Jersey on Flipkart</h2>
-    <p>Get latest IPL jerseys with offers.</p>
-    <a class="btn" href="https://www.flipkart.com/search?q=rcb%20jersey" target="_blank">
-      Buy RCB Jersey
-    </a>
+    <img src="https://via.placeholder.com/250x200?text=RCB+Away+Jersey" alt="Jersey">
+    <h3>Away Jersey</h3>
+    <p>Price: ₹1099</p>
+    <button class="btn" onclick="addToCart('Away Jersey')">Add to Cart</button>
   </div>
 
   <div class="card">
-    <h2>Official Fan Store Search</h2>
-    <p>Find official RCB merchandise and jerseys.</p>
-    <a class="btn" href="https://www.google.com/search?q=official+RCB+jersey+buy" target="_blank">
-      Find Official Store
-    </a>
+    <img src="https://via.placeholder.com/250x200?text=RCB+Fan+Edition" alt="Jersey">
+    <h3>Fan Edition</h3>
+    <p>Price: ₹799</p>
+    <button class="btn" onclick="addToCart('Fan Edition Jersey')">Add to Cart</button>
   </div>
 
 </div>
 
+<div id="cart">
+  <h2>🛒 Your Cart</h2>
+  <ul id="cartItems"></ul>
+</div>
+
 <footer>
-  © 2026 RCB Fan Store | Play Bold ❤️🖤
+  © 2026 RCB Jersey Store | Built by Fan ❤️🖤
 </footer>
+
+<script>
+  let cart = [];
+
+  function addToCart(item) {
+    cart.push(item);
+    updateCart();
+  }
+
+  function updateCart() {
+    let list = document.getElementById("cartItems");
+    list.innerHTML = "";
+
+    cart.forEach(function(item) {
+      let li = document.createElement("li");
+      li.textContent = item;
+      list.appendChild(li);
+    });
+  }
+</script>
 
 </body>
 </html>
