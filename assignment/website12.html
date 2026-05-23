@@ -1,56 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RCB Jersey Shop</title>
+  <title>RCB Official Jersey Store</title>
 
   <style>
-    body {
+    body{
       font-family: Arial;
-      text-align: center;
-      background: #111;
-      color: white;
+      text-align:center;
+      background:#0a0a0a;
+      color:white;
+      margin:0;
     }
 
-    .box {
-      margin-top: 50px;
+    header{
+      background:red;
+      padding:20px;
+      font-size:24px;
+      font-weight:bold;
     }
 
-    img {
-      width: 250px;
-      border-radius: 10px;
+    .card{
+      margin-top:40px;
     }
 
-    button {
-      background: red;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 18px;
-      border-radius: 5px;
-      cursor: pointer;
+    img{
+      width:250px;
+      border-radius:10px;
     }
 
-    button:hover {
-      background: darkred;
+    button{
+      padding:12px 25px;
+      background:#e10600;
+      color:white;
+      border:none;
+      font-size:18px;
+      border-radius:5px;
+      cursor:pointer;
+    }
+
+    button:hover{
+      background:darkred;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="box">
-    <h1>RCB Jersey</h1>
+  <header>RCB Official Jersey Store</header>
 
-    <img src="https://via.placeholder.com/250x300.png?text=RCB+Jersey" alt="RCB Jersey">
+  <div class="card">
+    <img src="https://shop.royalchallengers.com/cdn/shop/files/RCB_JERSEY.jpg" alt="RCB Jersey">
 
-    <h2>Price: ₹999</h2>
+    <h2>Official RCB Jersey</h2>
+    <h3>Price: ₹1,499</h3>
 
     <button onclick="buyNow()">Buy Now</button>
   </div>
 
   <script>
-    function buyNow() {
-      alert("RCB Jersey Added to Cart!");
+    function buyNow(){
+      window.location.href = "https://www.royalchallengers.com/";
     }
   </script>
 
